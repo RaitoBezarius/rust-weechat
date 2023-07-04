@@ -1,0 +1,19 @@
+[package]
+name = "weechat-mls"
+version = "0.1.0"
+authors = ["Ryan Lahfa <ryan@lahfa.xyz>"]
+edition = "2018"
+
+[lib]
+name = "mls"
+crate-type = ["cdylib"]
+
+[dependencies]
+fuzzy-matcher = "0.3.7"
+openmls = "0.4.1"
+
+[dependencies.weechat]
+path = "../../"
+features = ["config_macro", "unsound"]
+
+[workspace]
